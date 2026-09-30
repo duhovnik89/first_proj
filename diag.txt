@@ -1,0 +1,132 @@
+Коммиты `e38cedc` и `290fbdc`
+
+Шаг 1. Сделано.
+
+Шаг 2. Самодиагностика
+{"__diag__": "TAEclVkjJRKllA5j8MRKiCSR"}
+
+Результат прогона 1:
+{
+    "statusCode": 200,
+    "headers": {
+        "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": "
+	{\n  \"прокси_для_telegram\": false,\n  
+	\"отказавшие_ручки\": [\n    
+		\"TCP api.telegram.org:443\",\n    
+		\"HTTPS api.telegram.org (getMe)\",\n    
+		\"Metadata-сервис (IAM-токен)\"\n  ],
+	\n  \"проверки\": [\n    
+		{\n      \"ручка\": \"DNS api.telegram.org\",\n 	\"итог\": \"ОК\",\n      \"мс\": 3,\n      \"детали\": \"149.154.166.110\"\n    },\n    
+		{\n      \"ручка\": \"TCP api.telegram.org:443\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 129523,\n      \"ошибка\": \"TimeoutError: [Errno 110] Connect call failed ('149.154.166.110', 443)\"\n    },\n    
+		{\n      \"ручка\": \"HTTPS api.telegram.org (getMe)\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 10313,\n      \"ошибка\": \"TimeoutError: \"\n    },\n    
+		{\n      \"ручка\": \"DNS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 2,\n      \"детали\": \"87.240.129.140, 87.240.137.130, 87.240.137.206, 87.240.137.207, 87.240.137.208, 87.240.139.193, 87.240.190.70, 87.240.190.75, 93.186.225.205\"\n    },\n    
+		{\n      \"ручка\": \"TCP api.vk.com:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 15,\n      \"детали\": \"соединение с api.vk.com:443 установлено\"\n    },\n    
+		{\n      \"ручка\": \"HTTPS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 62,\n      \"детали\": \"HTTP 200\"\n    },\n    
+		{\n      \"ручка\": \"Metadata-сервис (IAM-токен)\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 3,\n      \"ошибка\": \"ContentTypeError: 200, message='Attempt to decode JSON with unexpected mimetype: text/plain', url='http://169.254.169.254/computeMetadata/v1/instance/service-accounts/default/token'\"\n    },\n    
+		{\n      \"ручка\": \"DNS functions.yandexcloud.net\",\n      \"итог\": \"ОК\",\n      \"мс\": 1,\n      \"детали\": \"84.201.162.181\"\n    },\n    
+		{\n      \"ручка\": \"TCP functions.yandexcloud.net:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 2,\n      \"детали\": \"соединение с functions.yandexcloud.net:443 установлено\"\n    }\n  
+		]\n}"
+}
+
+Результат прогона 2:
+{
+    "statusCode": 200,
+    "headers": {
+        "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": "
+	{\n  \"прокси_для_telegram\": false,\n  
+	\"отказавшие_ручки\": [\n    
+		\"TCP api.telegram.org:443\",\n    
+		\"HTTPS api.telegram.org (getMe)\",\n    
+		\"Metadata-сервис (IAM-токен)\"\n  ],\n  
+	\"проверки\": [\n    
+	{\n      \"ручка\": \"DNS api.telegram.org\",\n      \"итог\": \"ОК\",\n      \"мс\": 3,\n      \"детали\": \"149.154.166.110\"\n    },\n    
+	{\n      \"ручка\": \"TCP api.telegram.org:443\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 129722,\n      \"ошибка\": \"TimeoutError: [Errno 110] Connect call failed ('149.154.166.110', 443)\"\n    },\n    
+	{\n      \"ручка\": \"HTTPS api.telegram.org (getMe)\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 10518,\n      \"ошибка\": \"TimeoutError: \"\n    },\n    
+	{\n      \"ручка\": \"DNS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 3,\n      \"детали\": \"87.240.129.140, 87.240.137.130, 87.240.137.206, 87.240.137.207, 87.240.137.208, 87.240.139.193, 87.240.190.70, 87.240.190.75, 93.186.225.205\"\n    },\n   
+	{\n      \"ручка\": \"TCP api.vk.com:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 15,\n      \"детали\": \"соединение с api.vk.com:443 установлено\"\n    },\n    
+	{\n      \"ручка\": \"HTTPS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 42,\n      \"детали\": \"HTTP 200\"\n    },\n    
+	{\n      \"ручка\": \"Metadata-сервис (IAM-токен)\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 3,\n      \"ошибка\": \"ContentTypeError: 200, message='Attempt to decode JSON with unexpected mimetype: text/plain', url='http://169.254.169.254/computeMetadata/v1/instance/service-accounts/default/token'\"\n    },\n    
+	{\n      \"ручка\": \"DNS functions.yandexcloud.net\",\n      \"итог\": \"ОК\",\n      \"мс\": 1,\n      \"детали\": \"84.201.162.181\"\n    },\n    
+	{\n      \"ручка\": \"TCP functions.yandexcloud.net:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 2,\n      \"детали\": \"соединение с functions.yandexcloud.net:443 установлено\"\n    }\n  
+	]\n}"
+}
+
+Результат прогона 3:
+
+{
+    "statusCode": 200,
+    "headers": {
+        "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": "{\n  \"прокси_для_telegram\": false,\n  
+	\"отказавшие_ручки\": [\n    
+		\"TCP api.telegram.org:443\",\n    
+		\"HTTPS api.telegram.org (getMe)\",\n    
+		\"Metadata-сервис (IAM-токен)\"\n  ],\n  
+	\"проверки\": [\n    
+		{\n      \"ручка\": \"DNS api.telegram.org\",\n      \"итог\": \"ОК\",\n      \"мс\": 3,\n      \"детали\": \"149.154.166.110\"\n    },\n    
+		{\n      \"ручка\": \"TCP api.telegram.org:443\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 131157,\n      \"ошибка\": \"TimeoutError: [Errno 110] Connect call failed ('149.154.166.110', 443)\"\n    },\n    
+		{\n      \"ручка\": \"HTTPS api.telegram.org (getMe)\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 10900,\n      \"ошибка\": \"TimeoutError: \"\n    },\n    
+		{\n      \"ручка\": \"DNS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 3,\n      \"детали\": \"87.240.129.140, 87.240.137.130, 87.240.137.206, 87.240.137.207, 87.240.137.208, 87.240.139.193, 87.240.190.70, 87.240.190.75, 93.186.225.205\"\n    },\n    
+		{\n      \"ручка\": \"TCP api.vk.com:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 16,\n      \"детали\": \"соединение с api.vk.com:443 установлено\"\n    },\n    
+		{\n      \"ручка\": \"HTTPS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 42,\n      \"детали\": \"HTTP 200\"\n    },\n    
+		{\n      \"ручка\": \"Metadata-сервис (IAM-токен)\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 3,\n      \"ошибка\": \"ContentTypeError: 200, message='Attempt to decode JSON with unexpected mimetype: text/plain', url='http://169.254.169.254/computeMetadata/v1/instance/service-accounts/default/token'\"\n    },\n    
+		{\n      \"ручка\": \"DNS functions.yandexcloud.net\",\n      \"итог\": \"ОК\",\n      \"мс\": 1,\n      \"детали\": \"84.201.162.181\"\n    },\n    
+		{\n      \"ручка\": \"TCP functions.yandexcloud.net:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 4,\n      \"детали\": \"соединение с functions.yandexcloud.net:443 установлено\"\n    }\n  
+		]\n}"
+}
+
+
+
+
+Коммит 192dc7b
+
+Самодиагностика
+{"__diag__": "TAEclVkjJRKllA5j8MRKiCSR"}
+
+Результат прогона 1:
+{
+    "statusCode": 200,
+    "headers": {
+        "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": "{\n  \"прокси_для_telegram\": false,\n  
+	\"отказавшие_ручки\": [\n    
+		\"TCP api.telegram.org:443\",\n    
+		\"HTTPS api.telegram.org (getMe)\"\n  
+	],\n  
+	\"проверки\": [\n    
+	{\n      \"ручка\": \"DNS api.telegram.org\",\n      \"итог\": \"ОК\",\n      \"мс\": 4,\n      \"детали\": \"149.154.166.110\"\n    },\n    
+	{\n      \"ручка\": \"TCP api.telegram.org:443\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 10009,\n      \"ошибка\": \"TimeoutError: \"\n    },\n    
+	{\n      \"ручка\": \"HTTPS api.telegram.org (getMe)\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 10714,\n      \"ошибка\": \"TimeoutError: \"\n    },\n    
+	{\n      \"ручка\": \"DNS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 3,\n      \"детали\": \"87.240.129.140, 87.240.137.130, 87.240.137.206, 87.240.137.207, 87.240.137.208, 87.240.139.193, 87.240.190.70, 87.240.190.75, 93.186.225.205\"\n    },\n    
+	{\n      \"ручка\": \"TCP api.vk.com:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 20,\n      \"детали\": \"соединение с api.vk.com:443 установлено\"\n    },\n    
+	{\n      \"ручка\": \"HTTPS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 60,\n      \"детали\": \"HTTP 200\"\n    },\n    
+	{\n      \"ручка\": \"Metadata-сервис (IAM-токен)\",\n      \"итог\": \"ОК\",\n      \"мс\": 3,\n      \"детали\": \"HTTP 200, токен получен: True\"\n    },\n    
+	{\n      \"ручка\": \"DNS functions.yandexcloud.net\",\n      \"итог\": \"ОК\",\n      \"мс\": 1,\n      \"детали\": \"84.201.162.181\"\n    },\n    
+	{\n      \"ручка\": \"TCP functions.yandexcloud.net:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 9,\n      \"детали\": \"соединение с functions.yandexcloud.net:443 установлено\"\n    }\n  
+	]\n}"
+}
+
+Результат прогона 2:
+{
+    "statusCode": 200,
+    "headers": {
+        "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": "{\n  \"прокси_для_telegram\": false,\n  \"отказавшие_ручки\": [\n    \"TCP api.telegram.org:443\",\n    \"HTTPS api.telegram.org (getMe)\"\n  ],\n  \"проверки\": [\n    {\n      \"ручка\": \"DNS api.telegram.org\",\n      \"итог\": \"ОК\",\n      \"мс\": 10,\n      \"детали\": \"149.154.166.110\"\n    },\n    {\n      \"ручка\": \"TCP api.telegram.org:443\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 10009,\n      \"ошибка\": \"TimeoutError: \"\n    },\n    {\n      \"ручка\": \"HTTPS api.telegram.org (getMe)\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 10059,\n      \"ошибка\": \"TimeoutError: \"\n    },\n    {\n      \"ручка\": \"DNS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 8,\n      \"детали\": \"87.240.129.140, 87.240.137.130, 87.240.137.206, 87.240.137.207, 87.240.137.208, 87.240.139.193, 87.240.190.70, 87.240.190.75, 93.186.225.205\"\n    },\n    {\n      \"ручка\": \"TCP api.vk.com:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 20,\n      \"детали\": \"соединение с api.vk.com:443 установлено\"\n    },\n    {\n      \"ручка\": \"HTTPS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 59,\n      \"детали\": \"HTTP 200\"\n    },\n    {\n      \"ручка\": \"Metadata-сервис (IAM-токен)\",\n      \"итог\": \"ОК\",\n      \"мс\": 3,\n      \"детали\": \"HTTP 200, токен получен: True\"\n    },\n    {\n      \"ручка\": \"DNS functions.yandexcloud.net\",\n      \"итог\": \"ОК\",\n      \"мс\": 6,\n      \"детали\": \"84.201.162.181\"\n    },\n    {\n      \"ручка\": \"TCP functions.yandexcloud.net:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 7,\n      \"детали\": \"соединение с functions.yandexcloud.net:443 установлено\"\n    }\n  ]\n}"
+}
+
+
+Результат прогона 3:
+{
+    "statusCode": 200,
+    "headers": {
+        "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": "{\n  \"прокси_для_telegram\": false,\n  \"отказавшие_ручки\": [\n    \"TCP api.telegram.org:443\",\n    \"HTTPS api.telegram.org (getMe)\"\n  ],\n  \"проверки\": [\n    {\n      \"ручка\": \"DNS api.telegram.org\",\n      \"итог\": \"ОК\",\n      \"мс\": 3,\n      \"детали\": \"149.154.166.110\"\n    },\n    {\n      \"ручка\": \"TCP api.telegram.org:443\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 10009,\n      \"ошибка\": \"TimeoutError: \"\n    },\n    {\n      \"ручка\": \"HTTPS api.telegram.org (getMe)\",\n      \"итог\": \"ОТКАЗ\",\n      \"мс\": 10875,\n      \"ошибка\": \"TimeoutError: \"\n    },\n    {\n      \"ручка\": \"DNS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 4,\n      \"детали\": \"87.240.129.140, 87.240.137.130, 87.240.137.206, 87.240.137.207, 87.240.137.208, 87.240.139.193, 87.240.190.70, 87.240.190.75, 93.186.225.205\"\n    },\n    {\n      \"ручка\": \"TCP api.vk.com:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 21,\n      \"детали\": \"соединение с api.vk.com:443 установлено\"\n    },\n    {\n      \"ручка\": \"HTTPS api.vk.com\",\n      \"итог\": \"ОК\",\n      \"мс\": 65,\n      \"детали\": \"HTTP 200\"\n    },\n    {\n      \"ручка\": \"Metadata-сервис (IAM-токен)\",\n      \"итог\": \"ОК\",\n      \"мс\": 3,\n      \"детали\": \"HTTP 200, токен получен: True\"\n    },\n    {\n      \"ручка\": \"DNS functions.yandexcloud.net\",\n      \"итог\": \"ОК\",\n      \"мс\": 1,\n      \"детали\": \"84.201.162.181\"\n    },\n    {\n      \"ручка\": \"TCP functions.yandexcloud.net:443\",\n      \"итог\": \"ОК\",\n      \"мс\": 8,\n      \"детали\": \"соединение с functions.yandexcloud.net:443 установлено\"\n    }\n  ]\n}"
+}
